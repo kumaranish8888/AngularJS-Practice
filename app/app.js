@@ -1,8 +1,24 @@
 (function(){
     
-    angular.module("project", ["header", "drop", "comment", "form"]);
+    angular.module("project", ["header", "drop", "comment", "form", "ui.router"]);
     
-    angular.module("project").config([function(){
+    angular.module("project").config(["$stateProvider",function($stateProvider){
+        
+        var am = this;
+        
+        var dropObj = {
+            templateUrl:"app/drop/drop.tpl.html"
+        };
+        var commentObj = {
+            templateUrl: "app/comment/comment.tpl.html"
+        };
+        var formObj = {
+            templateUrl: "app/form/form.tpl.html"
+        };
+        
+        $stateProvider.state("drop", dropObj);
+        $stateProvider.state("comment", commentObj);
+        $stateProvider.state("form", formObj);
         
         
     }]);

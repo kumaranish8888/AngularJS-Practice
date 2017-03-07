@@ -5,9 +5,9 @@
     function headerSvc(){
         this.getItems = function(){
             return [
-            {"id":"login", "value": "Login"},
-            {"id":"register", "value": "Register"},
-            {"id":"products", "value": "Products"}
+            {"id":"drop", "value": "Countries"},
+            {"id":"comment", "value": "Comments"},
+            {"id":"form", "value": "Form"}
         ];
         }
     }
