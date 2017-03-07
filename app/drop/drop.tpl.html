@@ -1,0 +1,13 @@
+<div class="container" ng-controller="dropCtrl as dc">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2">Countries:</label>
+<div class="col-sm-4">
+    <select class="form-control" ng-model="dc.selectedCountry" ng-options="country.name for country in dc.countries"></select>
+    
+    </div>
+  </div>
+</form>
+</div>
+
+    

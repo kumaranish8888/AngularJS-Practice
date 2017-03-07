@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify');
-  var source = ["app.js", "gulpfile.js"];
+  var source = ["./app/app.js", "gulpfile.js"];
  
 gulp.task('connect', function() {
   connect.server();

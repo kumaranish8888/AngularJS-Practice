@@ -1,0 +1,31 @@
+(function(){
+    
+    angular.module("comment").service("commentSvc", [commentSvc]);
+    
+    function commentSvc(){
+        
+        this.getComments = function(){
+            
+            return [
+        {
+            "id": "101",
+            "text": "Wow, I have never seen a miracle like this"
+        },
+        {
+            "id": "102",
+            "text": "This is outstanding"
+        },
+        {
+            "id": "103",
+            "text": "What has just happened"
+        },
+        {
+            "id": "104",
+            "text": "This is great !"
+        }
+    ]; 
+            
+        }
+    }
+    
+})();

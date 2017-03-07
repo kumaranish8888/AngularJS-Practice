@@ -1,10 +1,32 @@
-<html>
+<html ng-app = "project">
 <head>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" >
+    <script src="bower_components/angular/angular.js"></script>
     </head>
 
     <body>
+        <div ng-controller="mainCtrl as mc" class="container">
+        <div ng-include="mc.headerTemplate"></div>
+            <div ng-include="mc.dropTemplate"></div>
+            <div ng-include="mc.commentTemplate"></div>
+            <div ng-include="mc.formTemplate"></div>
     <h1>This project is for practice only</h1>
-    <script src="app/app.js"></script>
+        </div>
+    
+        
+        
+        <script src="app/app.js"></script>
+        <script src="app/header/header.js"></script>
+        <script src="app/header/headerCtrl.js"></script>
+        <script src="app/header/headerSvc.js"></script>
+        <script src="app/drop/drop.js"></script>
+        <script src="app/drop/dropCtrl.js"></script>
+        <script src="app/drop/dropSvc.js"></script>
+        <script src="app/comment/comment.js"></script>
+        <script src="app/comment/commentCtrl.js"></script>
+        <script src="app/comment/commentSvc.js"></script>
+        <script src="app/form/form.js"></script>
+        <script src="app/form/formCtrl.js"></script>
+        <script src="app/form/formSvc.js"></script>
     </body>
 </html>
