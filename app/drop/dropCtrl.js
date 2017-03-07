@@ -5,7 +5,13 @@
     function dropCtrl(dropSvc){
         
         var dm = this;
-        this.countries = dropSvc.allCountries();
+        dropSvc.allCountries().then(function(response){
+            dm.countries = response.data.countries; 
+        }).catch(function(response){
+            
+        }).finally(function(response){
+            
+        });
         
     }
     

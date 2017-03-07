@@ -1,29 +1,12 @@
 (function(){
     
-    angular.module("comment").service("commentSvc", [commentSvc]);
+    angular.module("comment").service("commentSvc", ["$http", commentSvc]);
     
-    function commentSvc(){
+    function commentSvc($http){
         
         this.getComments = function(){
             
-            return [
-        {
-            "id": "101",
-            "text": "Wow, I have never seen a miracle like this"
-        },
-        {
-            "id": "102",
-            "text": "This is outstanding"
-        },
-        {
-            "id": "103",
-            "text": "What has just happened"
-        },
-        {
-            "id": "104",
-            "text": "This is great !"
-        }
-    ]; 
+            return $http.get("api/comments.json");
             
         }
     }

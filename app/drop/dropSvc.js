@@ -1,15 +1,11 @@
 (function(){
     
-    angular.module("drop").service("dropSvc", [dropSvc]);
+    angular.module("drop").service("dropSvc", ["$http", dropSvc]);
     
-    function dropSvc(){
+    function dropSvc($http){
         this.allCountries = function(){
-            
-            return [
-                {"name":"India", "code":"IN"},
-                {"name":"United States", "code":"USA"},
-                {"name":"Afganistan", "code":"AFG"}
-            ]; 
+            return $http.get("api/countries.json");
+        
         }
         
         

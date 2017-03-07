@@ -6,7 +6,13 @@
         
         var cm = this;
         
-        cm.myComments = commentSvc.getComments(); 
+        commentSvc.getComments().then(function(response){
+           cm.myComments = response.data.comments; 
+        }).catch(function(response){
+            
+        }).finally(function(response){
+            
+        });
         
     }
     
