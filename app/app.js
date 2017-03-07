@@ -7,13 +7,16 @@
         var am = this;
         
         var dropObj = {
-            templateUrl:"app/drop/drop.tpl.html"
+            templateUrl:"app/drop/drop.tpl.html",
+            controller: "dropCtrl as dc"
         };
         var commentObj = {
-            templateUrl: "app/comment/comment.tpl.html"
+            templateUrl: "app/comment/comment.tpl.html",
+            controller: "commentCtrl as cc"
         };
         var formObj = {
-            templateUrl: "app/form/form.tpl.html"
+            templateUrl: "app/form/form.tpl.html",
+            controller: "formCtrl"
         };
         
         $stateProvider.state("drop", dropObj);
@@ -28,9 +31,6 @@
     function mainCtrl(){
         var vm = this;
         vm.headerTemplate = "app/header/header.tpl.html";
-        vm.dropTemplate = "app/drop/drop.tpl.html";
-        vm.commentTemplate = "app/comment/comment.tpl.html";
-        vm.formTemplate = "app/form/form.tpl.html";
     }
     
 })();
