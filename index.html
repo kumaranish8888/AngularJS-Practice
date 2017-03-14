@@ -1,10 +1,27 @@
-<html>
+<html ng-app="myproject">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     
     </head>
 
-    <body>
-    <h1>This project is for practice only</h1>
-    <script src="app/app.js"></script>
+    <body ng-controller="myCtrl as mc" class="container">
+        <div ng-include="mc.headerTemplate"></div>
+        
+        <div ui-view></div>
+     <!--   <div ng-include="mc.registerTemplate"></div>
+        <div ng-include="mc.commentsTemplate"></div> -->
+        
+    <h1>This project is to practice ui-sref</h1>
+        <script src="app/app.js"></script>
+        <script src="app/header/header.js"></script>
+        <script src="app/header/headerCtrl.js"></script>
+        <script src="app/register/register.js"></script>
+        <script src="app/register/registerCtrl.js"></script>
+        <script src="app/register/registerSvc.js"></script>
+        <script src="app/comments/comments.js"></script>
+        <script src="app/comments/commentsCtrl.js"></script>
+        <script src="app/comments/commentsSvc.js"></script>
     </body>
 </html>
